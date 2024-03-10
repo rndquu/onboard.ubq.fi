@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    secrets: inherit
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
