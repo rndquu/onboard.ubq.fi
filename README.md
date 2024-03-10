@@ -3,7 +3,7 @@
 Generates the configuration for organizations, by creating a default configuration and creating a repository under the 
 given Organization.
 
-## Requirements!!
+## Requirements!!!
 
 Copy the `env.example` to `.env` and fill the required variables.
 
