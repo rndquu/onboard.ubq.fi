@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-22.04
-
+    secrets: inherit
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -34,7 +34,6 @@ jobs:
 
       - name: Deploy to Cloudflare
         uses: ubiquity/cloudflare-deploy-action@ci/debug-secrets
-        secrets: inherit
         with:
           repository: ${{ github.repository }}
           production_branch: ${{ github.event.repository.default_branch }}
