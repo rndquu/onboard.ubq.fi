@@ -8,7 +8,7 @@ plugins:
   - uses:
       - plugin: https://ubiquity-os-command-query-user-main.ubiquity.workers.dev
   - uses:
-      - plugin: ubiquity-os-marketplace/daemon-pricing@main
+      - plugin: https://ubiquity-os-daemon-pricing-main.ubiquity.workers.dev
   - uses:
       - plugin: ubiquity-os-marketplace/text-conversation-rewards@main
   - uses:
@@ -17,13 +17,3 @@ plugins:
       - plugin: ubiquity-os-marketplace/daemon-merging@main
   - uses:
       - plugin: https://ubiquity-os-comment-vector-embeddings-main.ubiquity.workers.dev
-  - uses:
-      - plugin: ubiquity-os-marketplace/ubiquity-os-kernel-telegram@main
-        with:
-          botId: 5112548588
-          storageOwner: "ubiquity-os-marketplace"
-  - uses:
-      - plugin: https://ubiquity-os-telegram-bridge-main.ubiquity.workers.dev
-        with:
-          botId: 5112548588
-          storageOwner: "ubiquity-os-marketplace"
