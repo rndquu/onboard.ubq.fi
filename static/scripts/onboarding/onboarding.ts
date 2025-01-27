@@ -1,7 +1,6 @@
 import { JsonRpcSigner } from "@ethersproject/providers";
 import { createOrUpdateTextFile } from "@octokit/plugin-create-or-update-text-file";
 import { Octokit } from "@octokit/rest";
-import { BotConfig } from "@ubiquibot/configuration";
 import { PERMIT2_ADDRESS } from "@uniswap/permit2-sdk";
 import { ethers } from "ethers";
 import { parseUnits } from "ethers/lib/utils";
@@ -59,7 +58,7 @@ export async function parseJSON<T>(data: string) {
   }
 }
 
-export function stringifyYAML(value: BotConfig): string {
+export function stringifyYAML(value: Record<string, unknown>): string {
   return YAML.stringify(value, { defaultKeyType: "PLAIN", defaultStringType: "QUOTE_DOUBLE", lineWidth: 0 });
 }
 
