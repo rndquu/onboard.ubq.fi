@@ -1,6 +1,7 @@
 import { execSync } from "child_process";
 import { config } from "dotenv";
 import esbuild from "esbuild";
+import { yamlPlugin } from "esbuild-plugin-yaml";
 
 const typescriptEntries = ["static/scripts/onboarding/onboarding.ts"];
 const cssEntries = ["static/styles/onboarding/onboarding.css"];
@@ -23,6 +24,7 @@ export const esBuildContext: esbuild.BuildOptions = {
   define: createEnvDefines(["SUPABASE_URL", "SUPABASE_ANON_KEY", "FRONTEND_URL"], {
     commitHash: execSync(`git rev-parse --short HEAD`).toString().trim(),
   }),
+  plugins: [yamlPlugin({})],
 };
 
 esbuild
