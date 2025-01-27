@@ -1,0 +1,29 @@
+plugins:
+  - uses:
+      - plugin: https://ubiquity-os-command-start-stop-main.ubiquity.workers.dev
+  - uses:
+      - plugin: https://ubiquity-os-command-wallet-main.ubiquity.workers.dev
+  - uses:
+      - plugin: ubiquity-os-marketplace/command-ask@main
+  - uses:
+      - plugin: https://ubiquity-os-command-query-user-main.ubiquity.workers.dev
+  - uses:
+      - plugin: ubiquity-os-marketplace/daemon-pricing@main
+  - uses:
+      - plugin: ubiquity-os-marketplace/text-conversation-rewards@main
+  - uses:
+      - plugin: ubiquity-os-marketplace/daemon-disqualifier@main
+  - uses:
+      - plugin: ubiquity-os-marketplace/daemon-merging@main
+  - uses:
+      - plugin: https://ubiquity-os-comment-vector-embeddings-main.ubiquity.workers.dev
+  - uses:
+      - plugin: ubiquity-os-marketplace/ubiquity-os-kernel-telegram@main
+        with:
+          botId: 5112548588
+          storageOwner: "ubiquity-os-marketplace"
+  - uses:
+      - plugin: https://ubiquity-os-telegram-bridge-main.ubiquity.workers.dev
+        with:
+          botId: 5112548588
+          storageOwner: "ubiquity-os-marketplace"
