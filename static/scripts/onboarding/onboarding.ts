@@ -370,7 +370,11 @@ async function step1Handler() {
     return;
   }
 
-  await sodiumEncryptedSeal(X25519_KEY, `${KEY_PREFIX}${walletPrivateKey.value}`);
+  const pluginKit = Octokit.plugin();
+  const octokit = new pluginKit({ auth: getSessionToken() });
+  const { data } = await octokit.rest.orgs.get({ org: orgName.value });
+  // https://github.com/ubiquity-os-marketplace/text-conversation-rewards?tab=readme-ov-file#how-to-encrypt-the-evmprivateencrypted-parameter
+  await sodiumEncryptedSeal(X25519_KEY, `${KEY_PREFIX}${walletPrivateKey.value}:${data.id}`);
   setConfig().catch((error) => {
     console.error(error);
   });
