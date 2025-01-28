@@ -10,7 +10,15 @@ plugins:
   - uses:
       - plugin: https://ubiquity-os-daemon-pricing-main.ubiquity.workers.dev
   - uses:
-      - plugin: ubiquity-os-marketplace/text-conversation-rewards@main
+      - plugin: "ubiquity-os-marketplace/text-conversation-rewards@main"
+        with:
+          incentives:
+            contentEvaluator: {}
+            userExtractor: {}
+            dataPurge: {}
+            formattingEvaluator: {}
+            permitGeneration: {}
+            githubComment: {}
   - uses:
       - plugin: ubiquity-os-marketplace/daemon-disqualifier@main
   - uses:

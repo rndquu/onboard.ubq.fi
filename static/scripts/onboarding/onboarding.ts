@@ -469,6 +469,7 @@ function setEvmSettings(privateKey: string, evmNetwork: number) {
     for (const use of plugin.uses) {
       if (use.plugin.includes("text-conversation-rewards")) {
         use.with = {
+          ...use.with,
           [PRIVATE_ENCRYPTED_KEY_NAME]: privateKey,
           [EVM_NETWORK_KEY_NAME]: evmNetwork,
         };
