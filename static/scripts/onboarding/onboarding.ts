@@ -447,7 +447,6 @@ async function populateOrgs() {
     const pluginKit = Octokit.plugin(createOrUpdateTextFile);
     const octokit = new pluginKit({ auth: getSessionToken() });
     const { data } = await octokit.rest.orgs.listForAuthenticatedUser({ per_page: 100 });
-    console.log(data);
     const selectContainer = document.getElementById("orgName");
     if (selectContainer) {
       selectContainer.innerHTML = "";
